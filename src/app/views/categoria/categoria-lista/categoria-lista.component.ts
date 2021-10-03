@@ -35,13 +35,13 @@ export class CategoriaListaComponent implements OnInit {
   }
 
   deletar(categoria: Categoria): void {
-    console.log(categoria)
     this.categoriaService.deletar(categoria).subscribe((resposta) => {
       this.ngOnInit();
       this.categoriaService.mensagem('Categoria deletada com sucesso!');
     },
     err => {
-      this.categoriaService.mensagem('Ocorreu um erro ao tentar apagar o registro'); 
+      console.log(err.error)
+      this.categoriaService.mensagem(err.error.error); 
     })
   }
 

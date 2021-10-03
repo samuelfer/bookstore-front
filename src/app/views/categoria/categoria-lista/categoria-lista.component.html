@@ -35,12 +35,14 @@
             <ng-container matColumnDef="acoes">
               <th class="mat-header" mat-header-cell *matHeaderCellDef> Ações </th>
               <td mat-cell *matCellDef="let row">
-                <a class="edit" href="#">
-                    <i class="material-icons">edit</i>
-                </a> 
-                <a class="delete" (click)="deletar(row)">
-                    <i class="material-icons">delete</i>
-                </a>   
+          
+                <button mat-mini-fab color="primary" aria-label="Editar o registro">
+                  <mat-icon>edit</mat-icon>
+                </button>
+              
+                <button mat-mini-fab color="warn" aria-label="Excluir o registro" (click)="deletar(row)">
+                  <mat-icon>delete</mat-icon>
+                </button>
               </td>
             </ng-container>
           
