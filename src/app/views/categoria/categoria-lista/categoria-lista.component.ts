@@ -18,7 +18,7 @@ export class CategoriaListaComponent implements OnInit {
     this.listarTodas();
   }
 
-  displayedColumns: string[] = ['id', 'nome', 'descricao', 'acoes'];
+  displayedColumns: string[] = ['id', 'nome', 'descricao', 'livros', 'acoes'];
 
   listarTodas() {
     this.service.listarTodas().subscribe(resposta => {
