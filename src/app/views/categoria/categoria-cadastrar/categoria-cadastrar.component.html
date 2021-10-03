@@ -1,1 +1,19 @@
-<p>categoria-cadastrar works!</p>
+<form>
+    <h1>Cadastrado de nova categoria</h1>
+
+    <mat-form-field class="form">
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)]="categoria.nome" type="text" name="nome" placeholder="Informe um nome">
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Descrição</mat-label>
+        <textarea matInput [(ngModel)]="categoria.descricao" type="text" name="descricao" placeholder="Informe a descrição"></textarea>
+    </mat-form-field>
+
+    <div class="buttons">
+        <button (click)="cadastrar()"  class="mat-elevation-z8" mat-stroked-button color="primary">Salvar</button>
+        <button  class="mat-elevation-z8" mat-stroked-button color="default">Cancelar</button>
+
+    </div>
+</form>
