@@ -17,6 +17,7 @@ import { HeaderComponent } from './component/template/header/header.component';
 import { NavComponent } from './component/template/nav/nav.component';
 import { CategoriaListaComponent } from './views/categoria/categoria-lista/categoria-lista.component';
 import { HomeComponent } from './views/home/home.component';
+import { CategoriaCadastrarComponent } from './views/categoria/categoria-cadastrar/categoria-cadastrar.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { HomeComponent } from './views/home/home.component';
     NavComponent,
     HomeComponent,
     CategoriaListaComponent,
+    CategoriaCadastrarComponent,
   ],
   imports: [
     BrowserModule,

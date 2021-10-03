@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Categoria } from '../categoria.model';
 import { CategoriaService } from '../categoria.service';
 
@@ -12,7 +13,7 @@ export class CategoriaListaComponent implements OnInit {
 
   categorias: Categoria[] = [];
 
-  constructor(private service: CategoriaService) { }
+  constructor(private service: CategoriaService, private router: Router) { }
 
   ngOnInit(): void {
     this.listarTodas();
@@ -22,9 +23,12 @@ export class CategoriaListaComponent implements OnInit {
 
   listarTodas() {
     this.service.listarTodas().subscribe(resposta => {
-      console.log('Resposta ', resposta)
       this.categorias = resposta;
     });
+  }
+
+  abrirFormCadastro(): void {
+    this.router.navigate(["categorias/cadastrar"]);
   }
 
 }
