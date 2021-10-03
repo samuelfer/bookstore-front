@@ -22,7 +22,7 @@ export class CategoriaCadastrarComponent implements OnInit {
   cadastrar(): void {
     this.categoriaService.cadastrar(this.categoria).subscribe((resposta) => {
         this.router.navigate(['categorias']);
-        this.categoriaService.mensagem('Categoria cadatrada com sucesso!');
+        this.categoriaService.mensagem('Categoria cadastrada com sucesso!');
     },
     err => {
       for (let i = 0; i < err.error.errors.length; i++) {

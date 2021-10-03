@@ -22,6 +22,7 @@ import { NavComponent } from './component/template/nav/nav.component';
 import { CategoriaCadastrarComponent } from './views/categoria/categoria-cadastrar/categoria-cadastrar.component';
 import { CategoriaListaComponent } from './views/categoria/categoria-lista/categoria-lista.component';
 import { HomeComponent } from './views/home/home.component';
+import { CategoriaDeleteComponent } from './views/categoria/categoria-delete/categoria-delete.component';
 
 
 
@@ -34,6 +35,7 @@ import { HomeComponent } from './views/home/home.component';
     HomeComponent,
     CategoriaListaComponent,
     CategoriaCadastrarComponent,
+    CategoriaDeleteComponent,
   ],
   imports: [
     BrowserModule,
