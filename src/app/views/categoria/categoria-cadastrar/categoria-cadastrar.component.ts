@@ -30,4 +30,8 @@ export class CategoriaCadastrarComponent implements OnInit {
       }
     })
   }
+
+  cancelar(): void {
+    this.router.navigate(['categorias']);
+  }
 }
