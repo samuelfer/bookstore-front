@@ -14,6 +14,10 @@ export class CategoriaService {
 
   constructor(private http: HttpClient, private _snack: MatSnackBar) { }
 
+  listarPorId(categoriaId: string): Observable<Categoria> {
+    return this.http.get<Categoria>(`${this.baseUrl}/categorias/${categoriaId}`)
+  }
+
   listarTodas(): Observable<Categoria[]> {
     return this.http.get<Categoria[]>(`${this.baseUrl}/categorias`)
   }
@@ -25,6 +29,11 @@ export class CategoriaService {
   deletar(categoria: Categoria): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}/categorias/${categoria.id}`);
   }
+
+  update(categoria: Categoria): Observable<void> {
+    return this.http.put<void>(`${this.baseUrl}/categorias/${categoria.id}`, categoria);
+  }
+
 
   mensagem(string: String): void {
     this._snack.open(`${string}`, 'ok', {
